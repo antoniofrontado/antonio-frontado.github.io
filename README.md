@@ -1,1 +1,1 @@
-# Antonio-frontado
+Soy venezolano y actualmente me encuentro en Chile, recorriendo el mundo en busca de experiencias que enriquezcan mi visión. Me apasiona la informática y la seguridad digital, campos donde encuentro propósito y desafío. Mi mayor debilidad es el perfeccionismo, pero también es lo que impulsa mi compromiso con la excelencia. Mi virtud: ser soñador, porque creo que todo gran proyecto comienza con una idea audaz
