@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antonio Frontado — Portafolio Tecnológico</title>
+  <meta name="description" content="Portafolio tecnológico de Antonio Frontado — Infraestructura TI, DevOps, Linux, Docker, AWS, VMware, Bases de Datos y más." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121a2f;
+      --muted: #95a1c0;
+      --fg: #e7ecff;
+      --accent: #7aa2ff;
+      --accent-2: #5de6c1;
+      --ring: rgba(122,162,255,0.35);
+    }
+    :root.light {
+      --bg: #f7f9ff;
+      --card: #ffffff;
+      --muted: #5a627a;
+      --fg: #111322;
+      --accent: #2b5cff;
+      --accent-2: #00bfa6;
+      --ring: rgba(43,92,255,0.15);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: linear-gradient(180deg, var(--bg), #0e1630 40%, var(--bg));
+      color: var(--fg); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; }
+
+    header {
+      display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-bottom: 28px;
+    }
+    .brand h1 { margin: 0; font-size: clamp(26px, 3.2vw, 44px); letter-spacing: 0.2px; }
+    .brand p { margin: 4px 0 0; color: var(--muted); }
+    .actions { display: flex; gap: 10px; align-items: center; }
+    .btn { display: inline-flex; gap: 10px; align-items: center; padding: 10px 14px; border-radius: 12px; border: 1px solid transparent; background: var(--card); color: var(--fg); box-shadow: 0 0 0 0 var(--ring);
+      transition: box-shadow .2s ease, transform .04s ease, border-color .2s ease; }
+    .btn:hover { box-shadow: 0 0 0 6px var(--ring); border-color: var(--accent); text-decoration: none; }
+    .btn:active { transform: translateY(1px); }
+
+    .grid { display: grid; gap: 18px; }
+    .two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .three { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { background: radial-gradient(1200px 600px at -20% -80%, rgba(90,97,224,0.15), transparent 40%), var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 18px; padding: 18px 18px; }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    section { margin: 18px 0 0; }
+    section > h2 { margin: 12px 0; font-size: 20px; font-weight: 700; letter-spacing: 0.2px; color: var(--fg); }
+    .badge { display: inline-flex; align-items: center; padding: 8px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); color: var(--fg); font-size: 13px; gap: 8px; margin: 6px 8px 0 0; }
+
+    .list { display: grid; gap: 12px; }
+    .item { display: grid; gap: 6px; padding: 12px; border-radius: 14px; background: var(--card); border: 1px solid rgba(255,255,255,0.06); }
+    .meta { color: var(--muted); font-size: 14px; }
+
+    footer { margin-top: 40px; padding-top: 16px; border-top: 1px dashed rgba(255,255,255,0.12); color: var(--muted); font-size: 14px; }
+
+    .chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); background: var(--card); }
+
+    .accent { color: var(--accent-2); }
+    .muted { color: var(--muted); }
+
+    .toggle {
+      cursor: pointer; border: 1px solid rgba(255,255,255,0.1); background: var(--card); color: var(--fg); padding: 10px 12px; border-radius: 12px;
+    }
+    .sr-only { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+    @media (max-width: 640px) {
+      header { grid-template-columns: 1fr; gap: 8px; }
+      .actions { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1>Antonio Frontado</h1>
+        <p>Infraestructura TI · DevOps · 15+ años de experiencia</p>
+        <p class="muted">Chile · Español / Inglés técnico / Portugués intermedio</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="https://www.linkedin.com/in/antonio-frontado-infante-8440b587" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        <a class="btn" href="https://antoniofrontado.github.io/curriculo/" target="_blank" rel="noopener">🌐 CV Actual</a>
+        <!-- TODO: Reemplaza con tu GitHub real si deseas -->
+        <a class="btn" href="#" onclick="alert('Agrega tu GitHub en el HTML')">🐙 GitHub</a>
+        <button class="toggle" id="themeToggle" aria-pressed="false"><span aria-hidden>🌙/☀️</span><span class="sr-only">Cambiar tema</span></button>
+      </div>
+    </header>
+
+    <section aria-labelledby="about">
+      <h2 id="about">Sobre mí</h2>
+      <div class="card">
+        <p>
+          Ingeniero/Analista de <strong>Infraestructura TI</strong> con foco en <strong>automatización</strong> y <strong>operaciones</strong>.
+          Experto en <strong>Linux/Windows</strong>, <strong>Docker</strong>, <strong>AWS</strong>, <strong>Huawei</strong>, <strong>VMware</strong>, 
+          y administración de <strong>PostgreSQL/MySQL</strong>. Experiencia con <strong>Moodle</strong> y analítica con <strong>Power BI</strong>.
+          Actualmente <strong>Analista de soporte TI en ACL</strong>, con autorización laboral definitiva en Chile.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Tecnologías</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Cloud / DevOps</h3>
+          <p>
+            <span class="badge">AWS</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Jenkins</span>
+            <span class="badge">GitHub</span>
+            <span class="badge">VMware</span>
+            <span class="badge">Linux</span>
+            <span class="badge">Windows</span>
+            <span class="badge">Huawei</span>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Bases de datos / BI</h3>
+          <p>
+            <span class="badge">PostgreSQL</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">Power BI</span>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Metodologías / Otros</h3>
+          <p>
+            <span class="badge">Ágiles</span>
+            <span class="badge">Git</span>
+            <span class="badge">Scripting</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">Experiencia</h2>
+      <div class="list">
+        <div class="item">
+          <div><strong>Analista de soporte TI</strong> · ACL</div>
+          <div class="meta">Actualidad · Chile</div>
+          <div class="muted">Soporte e infraestructura para entornos empresariales. Automatización, virtualización y monitoreo.</div>
+        </div>
+        <div class="item">
+          <div><strong>Experiencia previa</strong></div>
+          <div class="muted">15 años acumulados en operaciones TI, administración de sistemas, virtualización y bases de datos.</div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="projects">
+      <h2 id="projects">Proyectos destacados</h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>Proyecto 1 · Automatización DevOps</h3>
+          <p class="muted">Pipeline CI/CD con Docker y Jenkins. <em>(Describe brevemente tu aporte y resultado)</em></p>
+          <p><a href="#" aria-label="Enlace a repositorio o demo">Ver repositorio/demo →</a></p>
+        </article>
+        <article class="card">
+          <h3>Proyecto 2 · Migración de plataforma</h3>
+          <p class="muted">Contenerización de servicios y orquestación básica. <em>(Agrega métricas si las tienes)</em></p>
+          <p><a href="#">Ver repositorio/demo →</a></p>
+        </article>
+        <article class="card">
+          <h3>Proyecto 3 · Observabilidad</h3>
+          <p class="muted">Paneles de métricas y reportes con Power BI. <em>(Qué problema resolvió)</em></p>
+          <p><a href="#">Ver repositorio/demo →</a></p>
+        </article>
+        <article class="card">
+          <h3>Proyecto 4 · Moodle</h3>
+          <p class="muted">Administración y optimización de Moodle para alta disponibilidad.</p>
+          <p><a href="#">Ver repositorio/demo →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="education">
+      <h2 id="education">Formación, certificaciones</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Educación</h3>
+          <ul>
+            <li>Lic. en Administración mención Informática — UNESR</li>
+            <li>TSU en Informática — IUT de los Llanos</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Certificaciones</h3>
+          <p>
+            <span class="badge">Ethical Hacking</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Linux</span>
+            <span class="badge">Metodologías Ágiles</span>
+            <span class="badge">Jenkins</span>
+            <span class="badge">GitHub</span>
+            <span class="badge">Bases de Datos</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Contacto</h2>
+      <div class="card">
+        <div class="grid two">
+          <div>
+            <p class="chip">📍 Chile</p>
+            <p class="chip">🕓 Zona horaria: America/Santiago</p>
+          </div>
+          <div>
+            <p><strong>Email:</strong> <a href="mailto:antonio.frontado@example.com">antonio.frontado@example.com</a> <span class="muted">(reemplazar)</span></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/antonio-frontado-infante-8440b587" target="_blank" rel="noopener">Perfil</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Antonio Frontado · Portafolio</div>
+      <div class="muted">Hecho con HTML/CSS puro. Accesible y responsivo.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Tema claro/oscuro
+    const toggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const pref = localStorage.getItem('theme') || 'dark';
+    if (pref === 'light') root.classList.add('light');
+
+    toggle.addEventListener('click', () => {
+      root.classList.toggle('light');
+      const isLight = root.classList.contains('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      toggle.setAttribute('aria-pressed', isLight);
+    });
+  </script>
+
+ </body>
+</html>
