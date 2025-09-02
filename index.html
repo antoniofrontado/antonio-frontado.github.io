@@ -1,255 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Antonio Frontado — Portafolio Tecnológico</title>
-  <meta name="description" content="Portafolio tecnológico de Antonio Frontado — Infraestructura TI, DevOps, Linux, Docker, AWS, VMware, Bases de Datos y más." />
-  <style>
-    :root {
-      --bg: #0b1020;
-      --card: #121a2f;
-      --muted: #95a1c0;
-      --fg: #e7ecff;
-      --accent: #7aa2ff;
-      --accent-2: #5de6c1;
-      --ring: rgba(122,162,255,0.35);
-    }
-    :root.light {
-      --bg: #f7f9ff;
-      --card: #ffffff;
-      --muted: #5a627a;
-      --fg: #111322;
-      --accent: #2b5cff;
-      --accent-2: #00bfa6;
-      --ring: rgba(43,92,255,0.15);
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0; background: linear-gradient(180deg, var(--bg), #0e1630 40%, var(--bg));
-      color: var(--fg); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; }
-
-    header {
-      display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-bottom: 28px;
-    }
-    .brand h1 { margin: 0; font-size: clamp(26px, 3.2vw, 44px); letter-spacing: 0.2px; }
-    .brand p { margin: 4px 0 0; color: var(--muted); }
-    .actions { display: flex; gap: 10px; align-items: center; }
-    .btn { display: inline-flex; gap: 10px; align-items: center; padding: 10px 14px; border-radius: 12px; border: 1px solid transparent; background: var(--card); color: var(--fg); box-shadow: 0 0 0 0 var(--ring);
-      transition: box-shadow .2s ease, transform .04s ease, border-color .2s ease; }
-    .btn:hover { box-shadow: 0 0 0 6px var(--ring); border-color: var(--accent); text-decoration: none; }
-    .btn:active { transform: translateY(1px); }
-
-    .grid { display: grid; gap: 18px; }
-    .two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .three { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .card { background: radial-gradient(1200px 600px at -20% -80%, rgba(90,97,224,0.15), transparent 40%), var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 18px; padding: 18px 18px; }
-    .card h3 { margin: 0 0 8px; font-size: 18px; }
-    .card p { margin: 0; color: var(--muted); }
-
-    section { margin: 18px 0 0; }
-    section > h2 { margin: 12px 0; font-size: 20px; font-weight: 700; letter-spacing: 0.2px; color: var(--fg); }
-    .badge { display: inline-flex; align-items: center; padding: 8px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.08);
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); color: var(--fg); font-size: 13px; gap: 8px; margin: 6px 8px 0 0; }
-
-    .list { display: grid; gap: 12px; }
-    .item { display: grid; gap: 6px; padding: 12px; border-radius: 14px; background: var(--card); border: 1px solid rgba(255,255,255,0.06); }
-    .meta { color: var(--muted); font-size: 14px; }
-
-    footer { margin-top: 40px; padding-top: 16px; border-top: 1px dashed rgba(255,255,255,0.12); color: var(--muted); font-size: 14px; }
-
-    .chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); background: var(--card); }
-
-    .accent { color: var(--accent-2); }
-    .muted { color: var(--muted); }
-
-    .toggle {
-      cursor: pointer; border: 1px solid rgba(255,255,255,0.1); background: var(--card); color: var(--fg); padding: 10px 12px; border-radius: 12px;
-    }
-    .sr-only { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
-
-    @media (max-width: 640px) {
-      header { grid-template-columns: 1fr; gap: 8px; }
-      .actions { justify-content: flex-start; }
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Antonio Frontado — Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <header class="site-header">
+    <div class="container">
       <div class="brand">
-        <h1>Antonio Frontado</h1>
-        <p>Infraestructura TI · DevOps · 15+ años de experiencia</p>
-        <p class="muted">Chile · Español / Inglés técnico / Portugués intermedio</p>
+        <h1>Antonio José Frontado Infante</h1>
+        <p class="sub">Server Infrastructure Specialist · Soporte TI · DevOps friendly</p>
       </div>
-      <div class="actions">
-        <a class="btn" href="https://www.linkedin.com/in/antonio-frontado-infante-8440b587" target="_blank" rel="noopener">🔗 LinkedIn</a>
-        <a class="btn" href="https://antoniofrontado.github.io/curriculo/" target="_blank" rel="noopener">🌐 CV Actual</a>
-        <!-- TODO: Reemplaza con tu GitHub real si deseas -->
-        <a class="btn" href="#" onclick="alert('Agrega tu GitHub en el HTML')">🐙 GitHub</a>
-        <button class="toggle" id="themeToggle" aria-pressed="false"><span aria-hidden>🌙/☀️</span><span class="sr-only">Cambiar tema</span></button>
-      </div>
-    </header>
+      <nav class="nav">
+        <a href="#about">Sobre mí</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#education">Formación</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-    <section aria-labelledby="about">
-      <h2 id="about">Sobre mí</h2>
-      <div class="card">
-        <p>
-          Ingeniero/Analista de <strong>Infraestructura TI</strong> con foco en <strong>automatización</strong> y <strong>operaciones</strong>.
-          Experto en <strong>Linux/Windows</strong>, <strong>Docker</strong>, <strong>AWS</strong>, <strong>Huawei</strong>, <strong>VMware</strong>, 
-          y administración de <strong>PostgreSQL/MySQL</strong>. Experiencia con <strong>Moodle</strong> y analítica con <strong>Power BI</strong>.
-          Actualmente <strong>Analista de soporte TI en ACL</strong>, con autorización laboral definitiva en Chile.
-        </p>
-      </div>
-    </section>
-
-    <section aria-labelledby="skills">
-      <h2 id="skills">Tecnologías</h2>
-      <div class="grid three">
-        <div class="card">
-          <h3>Cloud / DevOps</h3>
-          <p>
-            <span class="badge">AWS</span>
-            <span class="badge">Docker</span>
-            <span class="badge">Jenkins</span>
-            <span class="badge">GitHub</span>
-            <span class="badge">VMware</span>
-            <span class="badge">Linux</span>
-            <span class="badge">Windows</span>
-            <span class="badge">Huawei</span>
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h2>Hola — soy <span class="accent">Antonio</span></h2>
+          <p>Licenciado en Administración (mención Informática) con +15 años de experiencia en Infraestructura, Soporte TI y proyectos con tecnologías como Kafka, Elasticsearch, Docker, AWS y Huawei.</p>
+          <p class="cta-row">
+            <a class="btn" href="#contact">Contáctame</a>
+            <a class="btn ghost" href="CV_Antonio_Frontado-3.pdf" target="_blank">Descargar CV (PDF)</a>
           </p>
-        </div>
-        <div class="card">
-          <h3>Bases de datos / BI</h3>
-          <p>
-            <span class="badge">PostgreSQL</span>
-            <span class="badge">MySQL</span>
-            <span class="badge">Power BI</span>
-          </p>
-        </div>
-        <div class="card">
-          <h3>Metodologías / Otros</h3>
-          <p>
-            <span class="badge">Ágiles</span>
-            <span class="badge">Git</span>
-            <span class="badge">Scripting</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="experience">
-      <h2 id="experience">Experiencia</h2>
-      <div class="list">
-        <div class="item">
-          <div><strong>Analista de soporte TI</strong> · ACL</div>
-          <div class="meta">Actualidad · Chile</div>
-          <div class="muted">Soporte e infraestructura para entornos empresariales. Automatización, virtualización y monitoreo.</div>
-        </div>
-        <div class="item">
-          <div><strong>Experiencia previa</strong></div>
-          <div class="muted">15 años acumulados en operaciones TI, administración de sistemas, virtualización y bases de datos.</div>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="projects">
-      <h2 id="projects">Proyectos destacados</h2>
-      <div class="grid two">
-        <article class="card">
-          <h3>Proyecto 1 · Automatización DevOps</h3>
-          <p class="muted">Pipeline CI/CD con Docker y Jenkins. <em>(Describe brevemente tu aporte y resultado)</em></p>
-          <p><a href="#" aria-label="Enlace a repositorio o demo">Ver repositorio/demo →</a></p>
-        </article>
-        <article class="card">
-          <h3>Proyecto 2 · Migración de plataforma</h3>
-          <p class="muted">Contenerización de servicios y orquestación básica. <em>(Agrega métricas si las tienes)</em></p>
-          <p><a href="#">Ver repositorio/demo →</a></p>
-        </article>
-        <article class="card">
-          <h3>Proyecto 3 · Observabilidad</h3>
-          <p class="muted">Paneles de métricas y reportes con Power BI. <em>(Qué problema resolvió)</em></p>
-          <p><a href="#">Ver repositorio/demo →</a></p>
-        </article>
-        <article class="card">
-          <h3>Proyecto 4 · Moodle</h3>
-          <p class="muted">Administración y optimización de Moodle para alta disponibilidad.</p>
-          <p><a href="#">Ver repositorio/demo →</a></p>
-        </article>
-      </div>
-    </section>
-
-    <section aria-labelledby="education">
-      <h2 id="education">Formación, certificaciones</h2>
-      <div class="grid two">
-        <div class="card">
-          <h3>Educación</h3>
-          <ul>
-            <li>Lic. en Administración mención Informática — UNESR</li>
-            <li>TSU en Informática — IUT de los Llanos</li>
+          <ul class="meta-list">
+            <li><strong>Ubicación:</strong> Santiago Centro, Chile</li>
+            <li><strong>Teléfono:</strong> +56 9 3669 3949</li>
+            <li><strong>Email:</strong> frontado.antonio@gmail.com</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>Certificaciones</h3>
-          <p>
-            <span class="badge">Ethical Hacking</span>
-            <span class="badge">Docker</span>
-            <span class="badge">Linux</span>
-            <span class="badge">Metodologías Ágiles</span>
-            <span class="badge">Jenkins</span>
-            <span class="badge">GitHub</span>
-            <span class="badge">Bases de Datos</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="contact">
-      <h2 id="contact">Contacto</h2>
-      <div class="card">
-        <div class="grid two">
-          <div>
-            <p class="chip">📍 Chile</p>
-            <p class="chip">🕓 Zona horaria: America/Santiago</p>
-          </div>
-          <div>
-            <p><strong>Email:</strong> <a href="mailto:antonio.frontado@example.com">antonio.frontado@example.com</a> <span class="muted">(reemplazar)</span></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/antonio-frontado-infante-8440b587" target="_blank" rel="noopener">Perfil</a></p>
+        <div class="card card-profile">
+          <div class="profile-photo">AF</div>
+          <h3>Antonio José Frontado</h3>
+          <p class="muted">Especialista en Infraestructura · Soporte · DevOps</p>
+          <div class="skills-pill">
+            <span>Linux</span><span>Docker</span><span>AWS</span><span>Kafka</span><span>Elastic</span>
           </div>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div>© <span id="year"></span> Antonio Frontado · Portafolio</div>
-      <div class="muted">Hecho con HTML/CSS puro. Accesible y responsivo.</div>
+    <section id="about" class="container section">
+      <h2>Resumen Profesional</h2>
+      <p>Licenciado en Administración con mención en Informática, con más de 15 años de experiencia en Telecomunicaciones, Banca y Salud. He trabajado en Infraestructura, soporte y despliegues, con enfoque en automatización y monitoreo.</p>
+      <ul>
+        <li>Conocimientos en Linux, Windows, Docker, AWS, Huawei Cloud.</li>
+        <li>Experiencia en Kafka, Elastic Stack, HAProxy, Hazelcast, Bash y administración de servidores.</li>
+        <li>Idiomas: Inglés técnico y portugués intermedio.</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="container section">
+      <h2>Experiencia Laboral</h2>
+
+      <div class="timeline">
+        <article class="item">
+          <h3>Server Infrastructure Specialist — Banco Santander (Estefanini LATAM)</h3>
+          <p class="period">01/2025 – Presente</p>
+          <ul>
+            <li>Soporte nivel 2 para aplicaciones del banco, monitoreo y resolución de incidentes.</li>
+            <li>Automatización de procesos y mantenimiento de infraestructuras críticas.</li>
+            <li>Tecnologías: Kafka, Elastic Stack, HAProxy, Hazelcast, Red Hat, Bash, Tibco.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Analista de Sistema — Cencosud (ACL)</h3>
+          <p class="period">01/2024 – 09/2024</p>
+          <ul>
+            <li>Configuración y soporte de Kafka y servicios POS en ambientes QA.</li>
+            <li>Mantenimiento de imágenes ERP y soporte de cajas.</li>
+            <li>Tecnologías: Kafka, Suse 15, Java, Bash, Office 365.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Ingeniero de Soporte e Infraestructura — Sistemas Expertos LTDA.</h3>
+          <p class="period">08/2020 – 05/2023</p>
+          <ul>
+            <li>Gestión de servidores Linux/Windows, Docker, monitoreo (Zabbix, Grafana).</li>
+            <li>Migración y mantenimiento de Moodle, administración en Huawei.</li>
+            <li>Tecnologías: Centos, Debian, Docker, GCP, AWS, PostgreSQL, Elastic, Nginx.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Freelance Soporte — Tutorial Spa</h3>
+          <p class="period">05/2020 – 08/2020</p>
+          <ul>
+            <li>Optimización de servidores Linux, gestión de certificados SSL y GitLab.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container section">
+      <h2>Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <div><h4>Sistemas / Infra</h4><p>Linux (CentOS, Debian), Windows Server, Docker, Kubernetes (básico)</p></div>
+        <div><h4>Observabilidad</h4><p>Zabbix, Grafana, Prometheus, Elastic Stack</p></div>
+        <div><h4>Mensajería / Middleware</h4><p>Kafka, Hazelcast, Tibco</p></div>
+        <div><h4>Bases de datos</h4><p>PostgreSQL, MySQL, MongoDB</p></div>
+      </div>
+    </section>
+
+    <section id="education" class="container section">
+      <h2>Formación y Cursos</h2>
+      <ul>
+        <li><strong>Licenciatura en Administración mención Informática</strong> — UNESR (2006-2016)</li>
+        <li><strong>TSU en Informática</strong> — IUT de los llanos, Guárico (2000-2004)</li>
+      </ul>
+      <h3>Cursos y Seminarios</h3>
+      <ul>
+        <li>Fundamentos Big Data — Santander (2024)</li>
+        <li>Fundamentos Python — Santander (2024)</li>
+        <li>Docker, Jenkins, Linux Fundamentals (Platzi / USACH)</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contacto</h2>
+      <p>Si quieres trabajar conmigo o revisar mi portafolio completo, contáctame.</p>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:frontado.antonio@gmail.com">frontado.antonio@gmail.com</a></li>
+        <li><strong>Teléfono:</strong> +56 9 3669 3949</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/antonio-frontado-infante-8440b587" target="_blank">linkedin.com/in/antonio-frontado-infante-8440b587</a></li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© Antonio José Frontado Infante — Portafolio · 2025</p>
+      </div>
     </footer>
-  </div>
-
-  <script>
-    // Año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Tema claro/oscuro
-    const toggle = document.getElementById('themeToggle');
-    const root = document.documentElement;
-    const pref = localStorage.getItem('theme') || 'dark';
-    if (pref === 'light') root.classList.add('light');
-
-    toggle.addEventListener('click', () => {
-      root.classList.toggle('light');
-      const isLight = root.classList.contains('light');
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
-      toggle.setAttribute('aria-pressed', isLight);
-    });
-  </script>
-
- </body>
+  </main>
+</body>
 </html>
