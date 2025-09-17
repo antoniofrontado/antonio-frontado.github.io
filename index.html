@@ -1,149 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Antonio Frontado — Portafolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Antonio Frontado</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">
-        <h1>Antonio José Frontado Infante</h1>
-        <p class="sub">Server Infrastructure Specialist · Soporte TI · DevOps friendly</p>
-      </div>
-      <nav class="nav">
-        <a href="#about">Sobre mí</a>
-        <a href="#experience">Experiencia</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#education">Formación</a>
-        <a href="#contact">Contacto</a>
-      </nav>
+
+  <header>
+    <h1>Antonio José Frontado Infante</h1>
+    <h2>Infraestructura TI & Soporte Especializado</h2>
+    <div class="contact">
+      <a href="mailto:frontado.antonio@gmail.com" title="Email">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="25">
+      </a>
+      <a href="https://www.linkedin.com/in/antonio-frontado-infante-8440b587" target="_blank" title="LinkedIn">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25">
+      </a>
+      <a href="https://wa.me/56936693949" target="_blank" title="WhatsApp Chile">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="25">
+      </a>
+      <a href="https://wa.me/584123212836" target="_blank" title="WhatsApp Venezuela">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="25">
+      </a>
     </div>
   </header>
 
-  <main>
-    <section id="hero" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h2>Hola — soy <span class="accent">Antonio</span></h2>
-          <p>Licenciado en Administración (mención Informática) con +15 años de experiencia en Infraestructura, Soporte TI y proyectos con tecnologías como Kafka, Elasticsearch, Docker, AWS y Huawei.</p>
-          <p class="cta-row">
-            <a class="btn" href="#contact">Contáctame</a>
-            <a class="btn ghost" href="CV_Antonio_Frontado.pdf" target="_blank">Descargar CV (PDF)</a>
-          </p>
-          <ul class="meta-list">
-            <li><strong>Ubicación:</strong> Santiago Centro, Chile</li>
-            <li><strong>Teléfono:</strong> +56 9 3669 3949</li>
-            <li><strong>Email:</strong> frontado.antonio@gmail.com</li>
-          </ul>
-        </div>
-        <div class="card card-profile">
-          <div class="profile-photo">AF</div>
-          <h3>Antonio José Frontado</h3>
-          <p class="muted">Especialista en Infraestructura · Soporte · DevOps</p>
-          <div class="skills-pill">
-            <span>Linux</span><span>Docker</span><span>AWS</span><span>Kafka</span><span>Elastic</span>
-          </div>
-        </div>
+  <section class="section">
+    <h2>Sobre mí</h2>
+    <p>Licenciado en Administración, mención Informática, con más de 15 años de experiencia en sectores clave como Telecomunicaciones, Banca y Salud. Especializado en Infraestructura TI y soporte técnico, ha liderado proyectos críticos en entornos Linux y Windows, integrando tecnologías como Docker, AWS y Huawei. Combina estabilidad operativa, automatización ética y visión estratégica, aportando soluciones robustas y escalables en contextos empresariales exigentes.</p>
+  </section>
+
+  <section class="section">
+    <h2>Experiencia Laboral</h2>
+
+    <!-- Estefanini LATAM - Santander (2025) -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Santander_Logo.svg" alt="Santander">
+      <div class="card-content">
+        <h3>Server Infrastructure Specialist - Banco Santander</h3>
+        <p><strong>Estefanini LATAM (Chile)</strong> | Ene 2025 – Ago 2025</p>
+        <ul>
+          <li>Soporte de nivel 2 para aplicaciones y sistemas del banco.</li>
+          <li>Monitoreo y aseguramiento del óptimo funcionamiento de aplicaciones.</li>
+          <li>Resolución de incidentes y automatización de procesos.</li>
+          <li>Tecnologías: Kafka, ElasticSearch, HaProxy, Hazelcast, Red Hat, Tibco, WAS, Control M, Service Now.</li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <section id="about" class="container section">
-      <h2>Resumen Profesional</h2>
-      <p>Licenciado en Administración con mención en Informática, con más de 15 años de experiencia en Telecomunicaciones, Banca y Salud. He trabajado en Infraestructura, soporte y despliegues, con enfoque en automatización y monitoreo.</p>
-      <ul>
-        <li>Conocimientos en Linux, Windows, Docker, AWS, Huawei Cloud.</li>
-        <li>Experiencia en Kafka, Elastic Stack, HAProxy, Hazelcast, Bash y administración de servidores.</li>
-        <li>Idiomas: Inglés técnico y portugués intermedio.</li>
-      </ul>
-    </section>
-
-    <section id="experience" class="container section">
-      <h2>Experiencia Laboral</h2>
-
-      <div class="timeline">
-        <article class="item">
-          <h3>Server Infrastructure Specialist — Banco Santander (Estefanini LATAM)</h3>
-          <p class="period">01/2025 – Presente</p>
-          <ul>
-            <li>Soporte nivel 2 para aplicaciones del banco, monitoreo y resolución de incidentes.</li>
-            <li>Automatización de procesos y mantenimiento de infraestructuras críticas.</li>
-            <li>Tecnologías: Kafka, Elastic Stack, HAProxy, Hazelcast, Red Hat, Bash, Tibco.</li>
-          </ul>
-        </article>
-
-        <article class="item">
-          <h3>Analista de Sistema — Cencosud (ACL)</h3>
-          <p class="period">01/2024 – 09/2024</p>
-          <ul>
-            <li>Configuración y soporte de Kafka y servicios POS en ambientes QA.</li>
-            <li>Mantenimiento de imágenes ERP y soporte de cajas.</li>
-            <li>Tecnologías: Kafka, Suse 15, Java, Bash, Office 365.</li>
-          </ul>
-        </article>
-
-        <article class="item">
-          <h3>Ingeniero de Soporte e Infraestructura — Sistemas Expertos LTDA.</h3>
-          <p class="period">08/2020 – 05/2023</p>
-          <ul>
-            <li>Gestión de servidores Linux/Windows, Docker, monitoreo (Zabbix, Grafana).</li>
-            <li>Migración y mantenimiento de Moodle, administración en Huawei.</li>
-            <li>Tecnologías: Centos, Debian, Docker, GCP, AWS, PostgreSQL, Elastic, Nginx.</li>
-          </ul>
-        </article>
-
-        <article class="item">
-          <h3>Freelance Soporte — Tutorial Spa</h3>
-          <p class="period">05/2020 – 08/2020</p>
-          <ul>
-            <li>Optimización de servidores Linux, gestión de certificados SSL y GitLab.</li>
-          </ul>
-        </article>
+    <!-- ACL - Cencosud (2024) -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Cencosud_logo.svg" alt="Cencosud">
+      <div class="card-content">
+        <h3>Analista de Sistemas - Cencosud</h3>
+        <p><strong>ACL (Chile)</strong> | Ene 2024 – Sep 2024</p>
+        <ul>
+          <li>Configuración de servicios Kafka y monitoreo de transacciones.</li>
+          <li>Implementación de sistemas de POS (cajas) en QA de Easy, Paris y Eurofashion.</li>
+          <li>Mantenimiento de ERP y soporte de sistemas de cajas.</li>
+          <li>Tecnologías: Kafka, Suse 15, Java, PowerBI, Office 365.</li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <section id="skills" class="container section">
-      <h2>Habilidades Técnicas</h2>
-      <div class="skills-grid">
-        <div><h4>Sistemas / Infra</h4><p>Linux (CentOS, Debian), Windows Server, Docker, Kubernetes (básico)</p></div>
-        <div><h4>Observabilidad</h4><p>Zabbix, Grafana, Prometheus, Elastic Stack</p></div>
-        <div><h4>Mensajería / Middleware</h4><p>Kafka, Hazelcast, Tibco</p></div>
-        <div><h4>Bases de datos</h4><p>PostgreSQL, MySQL, MongoDB</p></div>
+    <!-- Estefanini LATAM - Santander (2023) -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Santander_Logo.svg" alt="Santander">
+      <div class="card-content">
+        <h3>Server Infrastructure Specialist - Banco Santander</h3>
+        <p><strong>Estefanini LATAM (Chile)</strong> | Sep 2023 – Dic 2023</p>
+        <ul>
+          <li>Implementación de Kafka, Elastic, Hazelcast y HA Proxy en Santander.</li>
+          <li>Migración de índices, cuentas y dashboards de ElasticSearch 7.1 a 8.3.</li>
+          <li>Configuración de clusters en entornos de Desarrollo, QA y Producción.</li>
+          <li>Tecnologías: Kafka, ElasticSearch, Hazelcast, Red Hat, Bash.</li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <section id="education" class="container section">
-      <h2>Formación y Cursos</h2>
-      <ul>
-        <li><strong>Licenciatura en Administración mención Informática</strong> — UNESR (2006-2016)</li>
-        <li><strong>TSU en Informática</strong> — IUT de los llanos, Guárico (2000-2004)</li>
-      </ul>
-      <h3>Cursos y Seminarios</h3>
-      <ul>
-        <li>Fundamentos Big Data — Santander (2024)</li>
-        <li>Fundamentos Python — Santander (2024)</li>
-        <li>Docker, Jenkins, Linux Fundamentals (Platzi / USACH)</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="container section">
-      <h2>Contacto</h2>
-      <p>Si quieres trabajar conmigo o revisar mi portafolio completo, contáctame.</p>
-      <ul class="contact-list">
-        <li><strong>Email:</strong> <a href="mailto:frontado.antonio@gmail.com">frontado.antonio@gmail.com</a></li>
-        <li><strong>Teléfono:</strong> +56 9 3669 3949</li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/antonio-frontado-infante-8440b587" target="_blank">linkedin.com/in/antonio-frontado-infante-8440b587</a></li>
-      </ul>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© Antonio José Frontado Infante — Portafolio · 2025</p>
+    <!-- Sistemas Expertos LTDA -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3208/3208722.png" alt="Sistemas Expertos">
+      <div class="card-content">
+        <h3>Ingeniero de Soporte e Infraestructura</h3>
+        <p><strong>Sistemas Expertos LTDA (Chile)</strong> | Ago 2020 – May 2023</p>
+        <ul>
+          <li>Gestión de servidores Linux y Windows para entornos productivos.</li>
+          <li>Mantenimiento, configuración y migración de Moodle.</li>
+          <li>Réplicas de bases de datos en PostgreSQL.</li>
+          <li>Tecnologías: Docker, GCP, AWS, Huawei Cloud, Zabbix, Grafana, Prometheus, ElasticSearch.</li>
+        </ul>
       </div>
-    </footer>
-  </main>
+    </div>
+
+    <!-- Tutorial Spa -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/993/993928.png" alt="Tutorial Spa">
+      <div class="card-content">
+        <h3>Freelance Soporte</h3>
+        <p><strong>Tutorial Spa (Chile)</strong> | May 2020 – Ago 2020</p>
+        <ul>
+          <li>Optimización de servidores Linux y certificados SSL.</li>
+          <li>Administración de GitLab y resolución de fallos críticos.</li>
+          <li>Documentación de cambios y creación de manuales técnicos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- IESA -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/IESA_logo.png" alt="IESA">
+      <div class="card-content">
+        <h3>Analista de Sistemas</h3>
+        <p><strong>IESA (Caracas)</strong> | Abr 2019 – Mar 2020</p>
+        <ul>
+          <li>Soporte técnico en aula virtual Moodle.</li>
+          <li>Adecuaciones en front-end Moodle y pruebas de módulos SAIESA.</li>
+          <li>Administración de aula virtual y servidores asociados.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Synergy-GB -->
+    <div class="card">
+      <img src="https://media.licdn.com/dms/image/C4D0BAQEG5YiU0XyJzw/company-logo_200_200/0/1631332339798?e=2147483647&v=beta&t=vj8TYLE5fL0gEQc1cMMmPOlN5Mb7Nw8vLrDFfT3wTdc" alt="Synergy-GB">
+      <div class="card-content">
+        <h3>Líder de Soporte TI</h3>
+        <p><strong>Synergy-GB (Caracas)</strong> | Jun 2016 – Abr 2019</p>
+        <ul>
+          <li>Soporte técnico de alto nivel a usuarios internos y externos.</li>
+          <li>Administración de servidores, respaldos y red VPN.</li>
+          <li>Gestión de GitHub, GitLab y Nexus.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Telenorma -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Telenorma">
+      <div class="card-content">
+        <h3>Ingeniero Especialista</h3>
+        <p><strong>Telenorma C.A (Caracas)</strong> | Jun 2006 – Abr 2016</p>
+        <ul>
+          <li>Soporte técnico de nivel empresarial.</li>
+          <li>Administración de intranet y servidores.</li>
+          <li>Instalación y configuración de cámaras de seguridad y controles de acceso.</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section">
+    <h2>Educación</h2>
+    <ul>
+      <li><strong>Licenciado en Administración mención Informática</strong> – UNESR, Caracas (2006 – 2016)</li>
+      <li><strong>TSU en Informática</strong> – IUT de los Llanos, Guárico (2000 – 2004)</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Seminarios y Cursos</h2>
+    <ul>
+      <li>Fundamentos Big Data – Santander (2024)</li>
+      <li>Fundamentos Python – Santander (2024)</li>
+      <li>GitHub – Platzi (2023)</li>
+      <li>Jenkins Básico – Platzi (2023)</li>
+      <li>Introducción a terminales Linux – Platzi (2022)</li>
+      <li>Docker – Platzi (2022)</li>
+      <li>Fundamentos Linux – USACH (2021)</li>
+      <li>Ethical Hacking – USACH (2021)</li>
+      <li>Liderazgo – SENCE (2020)</li>
+      <li>Bases de Datos – SENCE (2020)</li>
+      <li>Metodologías Ágiles – SENCE (2020)</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Idiomas</h2>
+    <ul>
+      <li>🇬🇧 Inglés – Técnico</li>
+      <li>🇧🇷 Portugués – Intermedio</li>
+    </ul>
+  </section>
+
 </body>
 </html>
